@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>handson_description</name>
+  <version>0.1.0</version>
+  <description>Package to save robot and environment urdf</description>
+
+  <maintainer email="yu.yan@intel.com">Yu Yan</maintainer>
+  <maintainer email="sharron.liu@intel.com">Sharron Liu</maintainer>
+  <license>Apache 2.0</license>
+  <url type="website">https://github.com/RoboticsYY/moveit_handson.git</url>
+  <url type="repository">https://github.com/RoboticsYY/moveit_handson.git</url>
+  <url type="bugtracker">https://github.com/RoboticsYY/moveit_handson.git</url>
+  <author email="yu.yan@intel.com">Yu Yan</author>
+  <author email="sharron.liu@intel.com">Sharron Liu</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <exec_depend>xacro</exec_depend>
+  <exec_depend>ur_description</exec_depend>
+
+</package>
