@@ -5,19 +5,19 @@
   <!-- The positions of four corners of `X` w.r.t the `arm_base` frame -->
   <arg name="corner1_x" value="0.1"  />
   <arg name="corner1_y" value="-0.65" />
-  <arg name="corner1_z" value="0.2"/>
+  <arg name="corner1_z" value="0.15"/>
 
   <arg name="corner2_x" value="-0.1"   />
   <arg name="corner2_y" value="-0.45" />
-  <arg name="corner2_z" value="0.2"/>
+  <arg name="corner2_z" value="0.15"/>
 
   <arg name="corner3_x" value="-0.1"   />
   <arg name="corner3_y" value="-0.65" />
-  <arg name="corner3_z" value="0.2"/>
+  <arg name="corner3_z" value="0.15"/>
 
   <arg name="corner4_x" value="0.1"  />
   <arg name="corner4_y" value="-0.45" />
-  <arg name="corner4_z" value="0.2"/>
+  <arg name="corner4_z" value="0.15"/>
 
   <!-- Motion planning params -->
   <arg name="arm_base" default="base"/>
