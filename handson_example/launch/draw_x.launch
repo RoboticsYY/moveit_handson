@@ -1,0 +1,48 @@
+<launch>
+
+  <arg name="has_table" default="true"/>
+
+  <!-- The positions of four corners of `X` w.r.t the `arm_base` frame -->
+  <arg name="corner1_x" value="0.1"  />
+  <arg name="corner1_y" value="-0.65" />
+  <arg name="corner1_z" value="0.2"/>
+
+  <arg name="corner2_x" value="-0.1"   />
+  <arg name="corner2_y" value="-0.45" />
+  <arg name="corner2_z" value="0.2"/>
+
+  <arg name="corner3_x" value="-0.1"   />
+  <arg name="corner3_y" value="-0.65" />
+  <arg name="corner3_z" value="0.2"/>
+
+  <arg name="corner4_x" value="0.1"  />
+  <arg name="corner4_y" value="-0.45" />
+  <arg name="corner4_z" value="0.2"/>
+
+  <!-- Motion planning params -->
+  <arg name="arm_base" default="base"/>
+
+  <arg name="debug" default="false"/>
+
+  <node pkg="handson_example" type="draw_x" name="draw_x" output="screen" required="true">
+    <param name="corner1_x" type="double" value="$(arg corner1_x)"/> 
+    <param name="corner1_y" type="double" value="$(arg corner1_y)"/> 
+    <param name="corner1_z" type="double" value="$(arg corner1_z)"/> 
+
+    <param name="corner2_x" type="double" value="$(arg corner2_x)"/> 
+    <param name="corner2_y" type="double" value="$(arg corner2_y)"/> 
+    <param name="corner2_z" type="double" value="$(arg corner2_z)"/> 
+
+    <param name="corner3_x" type="double" value="$(arg corner3_x)"/> 
+    <param name="corner3_y" type="double" value="$(arg corner3_y)"/> 
+    <param name="corner3_z" type="double" value="$(arg corner3_z)"/> 
+
+    <param name="corner4_x" type="double" value="$(arg corner4_x)"/> 
+    <param name="corner4_y" type="double" value="$(arg corner4_y)"/> 
+    <param name="corner4_z" type="double" value="$(arg corner4_z)"/> 
+
+    <param name="arm_base" type="str" value="$(arg arm_base)"/>
+    <param name="debug" type="bool" value="$(arg debug)"/>
+  </node>
+
+</launch>
