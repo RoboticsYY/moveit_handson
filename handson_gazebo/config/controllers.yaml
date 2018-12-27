@@ -1,0 +1,67 @@
+# Joint state controller
+joint_state_controller:
+  publish_rate: 125
+  type: joint_state_controller/JointStateController
+
+# Gripper controller
+gripper_controller:
+  type: position_controllers/GripperActionController
+  joint: hitbot_base_finger0_joint
+  action_monitor_rate: 20
+  goal_tolerance: 0.002
+  max_effort: 100
+  stall_velocity_threshold: 0.001
+  stall_timeout: 1.0
+
+# Trajectory controller
+trajectory_controller:
+  type: "position_controllers/JointTrajectoryController"
+  joints:
+    - shoulder_pan_joint
+    - shoulder_lift_joint
+    - elbow_joint
+    - wrist_1_joint
+    - wrist_2_joint
+    - wrist_3_joint
+  constraints:
+    # Default is 0
+    goal_time: 0.6
+    # Default is 0.01
+    stopped_velocity_tolerance: 0.05
+    shoulder_pan_joint:
+      trajectory: 0
+      goal: 0.01
+    shoulder_lift_joint:
+      trajectory: 0
+      goal: 0.01
+    elbow_joint:
+      trajectory: 0
+      goal: 0.01
+    wrist_1_joint:
+      trajectory: 0
+      goal: 0.01
+    wrist_2_joint:
+      trajectory: 0
+      goal: 0.01
+    wrist_3_joint:
+      trajectory: 0
+      goal: 0.01
+#Position controller
+shoulder_pan_joint:
+  type: position_controllers/JointPositionController
+  joint: j1
+shoulder_lift_joint:
+  type: position_controllers/JointPositionController
+  joint: j2
+elbow_joint:
+  type: position_controllers/JointPositionController
+  joint: j3
+wrist_1_joint:
+  type: position_controllers/JointPositionController
+  joint: j4
+wrist_2_joint:
+  type: position_controllers/JointPositionController
+  joint: j5
+wrist_3_joint:
+  type: position_controllers/JointPositionController
+  joint: j6
