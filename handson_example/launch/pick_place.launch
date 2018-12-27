@@ -1,0 +1,3 @@
+<launch>
+  <node name="pick_place" pkg="handson_example" type="pick_place" required="true"/>
+</launch>
