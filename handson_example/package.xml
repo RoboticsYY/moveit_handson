@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>handson_example</name>
+  <version>0.1.0</version>
+  <description>Demo code for moveit handson</description>
+
+  <maintainer email="sharron.liu@intel.com">Sharron Liu</maintainer>
+  <maintainer email="yu.yan@intel.com">Yu Yan</maintainer>
+  <license>Apache 2.0</license>
+  <url type="website">https://github.com/RoboticsYY/moveit_handson.git</url>
+  <url type="repository">https://github.com/RoboticsYY/moveit_handson.git</url>
+  <url type="bugtracker">https://github.com/RoboticsYY/moveit_handson.git</url>
+  <author email="sharron.liu@intel.com">Sharron Liu</author>
+  <author email="yu.yan@intel.com">Yu Yan</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>moveit_core</build_depend>
+  <build_depend>moveit_visual_tools</build_depend>
+  <build_depend>moveit_ros_planning</build_depend>
+  <build_depend>moveit_ros_planning_interface</build_depend>
+  <build_depend>pluginlib</build_depend>
+
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>moveit_core</exec_depend>
+  <exec_depend>moveit_visual_tools</exec_depend>
+  <exec_depend>moveit_ros_planning</exec_depend>
+  <exec_depend>moveit_ros_planning_interface</exec_depend>
+  <exec_depend>pluginlib</exec_depend>
+
+</package>
