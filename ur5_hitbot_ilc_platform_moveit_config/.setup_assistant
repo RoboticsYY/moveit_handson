@@ -8,4 +8,4 @@ moveit_setup_assistant_config:
   CONFIG:
     author_name: yuyan
     author_email: yu.yan@intel.com
-    generated_timestamp: 1545812192
+    generated_timestamp: 1545896963
