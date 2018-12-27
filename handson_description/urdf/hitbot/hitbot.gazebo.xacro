@@ -1,10 +1,25 @@
 <?xml version='1.0' encoding='utf-8'?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="hitbot_gazebo">
 
-	<gazebo reference="hitbot_base"><material>Gazebo/Black</material></gazebo>
-	<gazebo reference="hitbot_mask"></gazebo>
-	<gazebo reference="hitbot_finger0"><material>Gazebo/Grey</material></gazebo>
-	<gazebo reference="hitbot_finger1"><material>Gazebo/Grey</material></gazebo>
+	<gazebo reference="hitbot_base">
+    <material>Gazebo/Black</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+  </gazebo>
+	<gazebo reference="hitbot_mask">
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+  </gazebo>
+	<gazebo reference="hitbot_finger0">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+  </gazebo>
+	<gazebo reference="hitbot_finger1">
+    <material>Gazebo/Grey</material>
+    <mu1>0.9</mu1>
+    <mu2>0.9</mu2>
+  </gazebo>
 
 	<transmission name="hitbot_finger_joint1_trans">
     <type>transmission_interface/SimpleTransmission</type>
@@ -13,6 +28,7 @@
     </joint>
     <actuator name="hitbot_finger_joint1_motor">
       <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </actuator>
   </transmission>
 
@@ -23,6 +39,7 @@
     </joint>
     <actuator name="hitbot_finger_joint2_motor">
       <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     </actuator>
   </transmission>
 
