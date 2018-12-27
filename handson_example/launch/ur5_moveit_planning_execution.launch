@@ -11,7 +11,7 @@
   <remap unless="$(arg sim)" from="ur5_hand_controller/gripper_cmd" to="/gripper_cmd"/>
   
   <!-- Launch moveit -->
-  <include file="$(find ur5_hitbot_with_ilc_platform_moveit_config)/launch/move_group.launch">
+  <include file="$(find ur5_hitbot_ilc_platform_moveit_config)/launch/move_group.launch">
     <arg name="debug" default="$(arg debug)" />
   </include>
 
