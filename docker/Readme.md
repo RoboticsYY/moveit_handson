@@ -3,6 +3,7 @@
 Files in this folder is used to make docker image of intel/kinetic:moveit_handson base environment.
 
 Dockerfile -- the base file which will be automatically loaded when run docker build command
+
 setup_docker_display.sh -- set the container to display a pop-up
 
 # Build command:
