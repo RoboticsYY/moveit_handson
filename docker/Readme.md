@@ -5,6 +5,7 @@ Files in this folder is used to make docker image of intel/kinetic:moveit_handso
 Dockerfile -- the base file which will be automatically loaded when run docker build command.
 
 setup_docker_display.sh -- set the container to display a pop-up x window.
+
 install_docker.sh -- install docker-ce on ubuntu16.04 and newer.
 
 # Build command:
@@ -21,10 +22,8 @@ sudo docker build -t intel/kinetic:moveit_handson --build-arg http_proxy=http://
 # Run docker image
 After the project runs, there will be a pop-up x window, you need to set the operating environment first.
 ```
-./moveit_handson/setup_docker_display.sh
-```
-Run this docker images
-```
+./docker/setup_docker_display.sh
+
 sudo docker run -t -i --rm -v $XSOCK:$XSOCK:rw -v $XAUTH:$XAUTH:rw -e XAUTHORITY=${XAUTH} -e DISPLAY --name moveit_handson intel/kinetic:moveit_handson bash
 ```
 
