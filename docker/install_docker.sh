@@ -26,3 +26,6 @@ sudo apt-get update
 # 6.Install docker-ce
 sudo apt-get install -y docker-ce
 apt-cache madison docker-ce
+# 7.add user group
+sudo groupadd docker
+sudo usermod -aG docker $USER
