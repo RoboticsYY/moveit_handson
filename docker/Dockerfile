@@ -28,19 +28,7 @@ RUN apt-get install -y wget \
     make \
     cmake \
     cppcheck \
-    python-pip
-
-# Install opencv
-RUN mkdir -p /root/code/opencv
-WORKDIR /root/code/opencv
-RUN git clone -b 3.3.0 https://github.com/opencv/opencv
-RUN git clone -b 3.3.0 https://github.com/opencv/opencv_contrib
-RUN mkdir -p opencv/build
-WORKDIR /root/code/opencv/opencv/build
-RUN cmake -DOPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules -DBUILD_opencv_cnn_3dobj=OFF ../
-RUN make -j$(nproc) && make install
-RUN echo "/usr/local/lib" > /etc/ld.so.conf.d/opencv.conf
-RUN ldconfig
+    python-pip 
 
 # Install moveit
 RUN apt-get install -y ros-kinetic-moveit
