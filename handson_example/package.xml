@@ -37,6 +37,7 @@ limitations under the License.
   <build_depend>moveit_ros_planning</build_depend>
   <build_depend>moveit_ros_planning_interface</build_depend>
   <build_depend>pluginlib</build_depend>
+  <build_depend>geometric_shapes</build_depend>
 
   <exec_depend>roscpp</exec_depend>
   <exec_depend>moveit_core</exec_depend>

@@ -30,6 +30,7 @@ find_package(catkin REQUIRED COMPONENTS
     moveit_ros_planning
     moveit_ros_planning_interface
     pluginlib
+    geometric_shapes
 )
 
 find_package(Boost REQUIRED)
@@ -54,3 +55,6 @@ target_link_libraries(pick_place ${catkin_LIBRARIES} ${Boost_LIBRARIES})
 
 add_executable(draw_x src/draw_x.cpp)
 target_link_libraries(draw_x ${catkin_LIBRARIES} ${Boost_LIBRARIES})
+
+add_executable(experiment src/experiment.cpp)
+target_link_libraries(experiment ${catkin_LIBRARIES} ${Boost_LIBRARIES})
