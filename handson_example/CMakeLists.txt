@@ -50,11 +50,11 @@ include_directories(SYSTEM ${THIS_PACKAGE_INCLUDE_DIRS} ${Boost_INCLUDE_DIR} ${E
 include_directories(${catkin_INCLUDE_DIRS})
 link_directories(${catkin_LIBRARY_DIRS})
 
-add_executable(pick_place src/pick_place.cpp)
-target_link_libraries(pick_place ${catkin_LIBRARIES} ${Boost_LIBRARIES})
-
 add_executable(draw_x src/draw_x.cpp)
 target_link_libraries(draw_x ${catkin_LIBRARIES} ${Boost_LIBRARIES})
 
-add_executable(experiment src/experiment.cpp)
-target_link_libraries(experiment ${catkin_LIBRARIES} ${Boost_LIBRARIES})
+add_executable(pick_place src/pick_place.cpp)
+target_link_libraries(pick_place ${catkin_LIBRARIES} ${Boost_LIBRARIES})
+
+add_executable(box_pick src/box_pick.cpp)
+target_link_libraries(box_pick ${catkin_LIBRARIES} ${Boost_LIBRARIES})
